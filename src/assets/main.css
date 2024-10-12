@@ -1,0 +1,29 @@
+:root {
+  --background-color: rgb(33, 33, 33);
+  --text-color: rgb(244, 244, 244);
+  --card-color: rgb(100, 100, 100);
+  --spacer: 1rem;
+  @media (prefers-color-scheme: light) {
+    --background-color: rgb(244, 244, 244);
+    --text-color: rgb(33, 33, 33);
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-color);
+  border-radius: 6px;
+  padding: var(--spacer);
+  margin: var(--spacer);
+}
+
+.coa {
+  --spacer: 3rem;
+  svg {
+    width: 33vw;
+  }
+}

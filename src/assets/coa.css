@@ -1,0 +1,39 @@
+:root {
+  --heraldry-tincture-or: rgb(255, 215, 0);
+  --heraldry-tincture-argent: rgb(255, 255, 255);
+
+  --heraldry-tincture-gules: rgb(255, 0, 0);
+  --heraldry-tincture-sable: rgb(0, 0, 0);
+  --heraldry-tincture-azure: rgb(0, 0, 255);
+  --heraldry-tincture-vert: rgb(0, 128, 0);
+  --heraldry-tincture-purpure: rgb(128, 0, 128);
+
+  --heraldry-tincture-murrey: rgb(139, 0, 75);
+  --heraldry-tincture-sanguine: rgb(178, 34, 34);
+  --heraldry-tincture-tenne: rgb(198, 112, 0);
+
+  --heraldry-outer-tincture: var(--heraldry-tincture-purpure);
+  --heraldry-inner-tincture: var(--heraldry-tincture-azure);
+
+  --heraldry-shield-tincture: var(--heraldry-tincture-or);
+  --heraldry-division-tincture: var(--heraldry-tincture-vert);
+  --heraldry-division-stroke: var(--heraldry-tincture-sable);
+  --heraldry-division-stroke-width: 1;
+}
+
+.coa {
+  .outer {
+    fill: var(--heraldry-outer-tincture);
+  }
+  .inner {
+    fill: var(--heraldry-inner-tincture);
+  }
+  .field {
+    fill: var(--heraldry-shield-tincture);
+  }
+  .division {
+    fill: var(--heraldry-division-tincture);
+    stroke-width: var(--heraldry-division-stroke);
+    stroke: var(--heraldry-division-stroke);
+  }
+}
