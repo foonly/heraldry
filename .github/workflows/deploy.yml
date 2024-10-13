@@ -33,3 +33,6 @@ jobs:
           key: ${{ secrets.SSH_GITHUB_KEY }}
           name: id_ed25519
           known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
+      - name: Deploy files
+        run: rsync -rlci --verbose --delete dist web.jco.fi:/var/www/heraldry;
