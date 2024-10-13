@@ -35,4 +35,4 @@ jobs:
           known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
 
       - name: Deploy files
-        run: rsync -rlci --verbose --delete dist webmaster@web.jco.fi:/var/www/heraldry;
+        run: rsync -rlci --verbose --delete dist webmaster@web.jco.fi:/var/www/heraldry
