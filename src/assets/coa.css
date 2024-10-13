@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Unifraktur';
+  src: url('/UnifrakturMaguntia-Regular.ttf') format('TrueType');
+}
+
 :root {
   --heraldry-tincture-or: rgb(255, 215, 0);
   --heraldry-tincture-argent: rgb(255, 255, 255);
@@ -19,9 +24,11 @@
   --heraldry-division-tincture: var(--heraldry-tincture-vert);
   --heraldry-division-stroke: var(--heraldry-tincture-sable);
   --heraldry-division-stroke-width: 1;
+
+  --banner-font: 'Unifraktur';
 }
 
-.coa {
+.coat-of-arms {
   .outer {
     fill: var(--heraldry-outer-tincture);
   }
@@ -35,5 +42,12 @@
     fill: var(--heraldry-division-tincture);
     stroke-width: var(--heraldry-division-stroke);
     stroke: var(--heraldry-division-stroke);
+  }
+  .banner-text {
+    font-family: var(--banner-font);
+    font-size: 28px;
+    text-align: center;
+    text-anchor: middle;
+    fill: #353329;
   }
 }

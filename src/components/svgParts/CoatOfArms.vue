@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import { useCOAStore } from '@/stores/coa'
 import ShieldBase from './ShieldBase.vue'
-const bannerText = 'Banner Text'
+const coa = useCOAStore()
 </script>
 
 <template>
@@ -15,6 +16,7 @@ const bannerText = 'Banner Text'
     viewBox="0 0 404.863 402.446"
     enable-background="new 0 0 404.863 402.446"
     xml:space="preserve"
+    class="coat-of-arms"
   >
     <g id="helmet">
       <linearGradient
@@ -603,12 +605,8 @@ const bannerText = 'Banner Text'
     <g id="banner_text">
       <text
         xml:space="preserve"
+        class="banner-text"
         style="
-          font-family: Kingthings Spikeless;
-          font-size: 28px;
-          text-align: center;
-          text-anchor: middle;
-          fill: #353329;
           stroke: none;
           stroke-width: 1.00197315px;
           stroke-linecap: butt;
@@ -619,7 +617,7 @@ const bannerText = 'Banner Text'
         y="385"
         id="text3040"
       >
-        {{ bannerText }}
+        {{ coa.bannerText }}
       </text>
     </g>
   </svg>

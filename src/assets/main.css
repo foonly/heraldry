@@ -1,8 +1,12 @@
 :root {
-  --background-color: rgb(33, 33, 33);
+  --background-color: rgb(66, 66, 66);
   --text-color: rgb(244, 244, 244);
-  --card-color: rgb(100, 100, 100);
+  --card-color: rgb(40, 40, 40);
+  --border-color: rgb(160, 160, 160);
   --spacer: 1rem;
+  --border-radius: 6px;
+  --banner-font: 'Unifraktur';
+
   @media (prefers-color-scheme: light) {
     --background-color: rgb(244, 244, 244);
     --text-color: rgb(33, 33, 33);
@@ -14,16 +18,30 @@ body {
   color: var(--text-color);
 }
 
+input[type='text'] {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  background-color: transparent;
+}
+
 .card {
   background-color: var(--card-color);
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   padding: var(--spacer);
   margin: var(--spacer);
+  box-shadow: 5px 5px 15px rgba(30, 30, 30, 0.8);
 }
 
 .coa {
   --spacer: 3rem;
   svg {
-    width: 33vw;
+    height: 50vh;
   }
+}
+
+.generator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
