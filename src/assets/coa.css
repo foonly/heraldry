@@ -17,8 +17,8 @@
   --heraldry-tincture-sanguine: rgb(178, 34, 34);
   --heraldry-tincture-tenne: rgb(198, 112, 0);
 
-  --heraldry-outer-tincture: var(--heraldry-tincture-purpure);
-  --heraldry-inner-tincture: var(--heraldry-tincture-azure);
+  --heraldry-outer-tincture: var(--heraldry-tincture-azure);
+  --heraldry-inner-tincture: var(--heraldry-tincture-gules);
 
   --heraldry-shield-tincture: var(--heraldry-tincture-or);
   --heraldry-division-tincture: var(--heraldry-tincture-vert);

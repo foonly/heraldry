@@ -4,6 +4,13 @@ import ShieldBase from './ShieldBase.vue'
 const coa = useCOAStore()
 </script>
 
+<style lang="css">
+.coat-of-arms {
+  --heraldry-outer-tincture: v-bind(coa.tinctures.outer);
+  --heraldry-inner-tincture: v-bind(coa.tinctures.inner);
+}
+</style>
+
 <template>
   <svg
     version="1.1"

@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main>Test</main>
+  <main>This is a very early test version of the new heraldric coat of arms generator.</main>
 </template>

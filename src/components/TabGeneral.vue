@@ -5,4 +5,6 @@ const coa = useCOAStore()
 
 <template>
   <input type="text" v-model="coa.bannerText" />
+  <input type="text" v-model="coa.tinctures.outer" />
+  <input type="text" v-model="coa.tinctures.inner" />
 </template>
