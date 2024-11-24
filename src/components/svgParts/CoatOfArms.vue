@@ -2,12 +2,17 @@
 import { useCOAStore } from '@/stores/coa'
 import ShieldBase from './ShieldBase.vue'
 const coa = useCOAStore()
+const tinctureValue = (tincture: string) => {
+  return `var(--heraldry-tincture-${tincture}`
+}
 </script>
 
 <style lang="css">
 .coat-of-arms {
-  --heraldry-outer-tincture: v-bind(coa.tinctures.outer);
-  --heraldry-inner-tincture: v-bind(coa.tinctures.inner);
+  --heraldry-outer-tincture: v-bind(tinctureValue(coa.tinctures.outer));
+  --heraldry-inner-tincture: v-bind(tinctureValue(coa.tinctures.inner));
+  --heraldry-shield-tincture: v-bind(tinctureValue(coa.tinctures.shield));
+  --heraldry-division-tincture: v-bind(tinctureValue(coa.tinctures.division));
 }
 </style>
 
@@ -429,7 +434,7 @@ const coa = useCOAStore()
       </g>
     </g>
     <g id="shield" transform="translate(81,130) scale(.60)">
-      <ShieldBase />
+      <ShieldBase :division="coa.division" />
     </g>
     <g id="over_shield_frans">
       <path
@@ -529,7 +534,7 @@ const coa = useCOAStore()
 		C167.976,46.69,202.257,61.565,202.257,61.565z"
       />
     </g>
-    <g id="banner">
+    <g id="banner" v-if="coa.bannerText">
       <linearGradient
         id="banner_left_grad"
         gradientUnits="userSpaceOnUse"
@@ -608,24 +613,30 @@ const coa = useCOAStore()
 		s-3.25-47.908-2-49.717c0.625,1.113,1.346,4.633,8.617,6.595c23.4,6.316,120.096,7.327,156.717,6.762
 		c37.63-0.581,135.287-1.689,157.58-7.43c6.144-1.583,7.753-4.813,7.753-4.813L365.733,388.604z"
       />
-    </g>
-    <g id="banner_text">
-      <text
-        xml:space="preserve"
-        class="banner-text"
-        style="
-          stroke: none;
-          stroke-width: 1.00197315px;
-          stroke-linecap: butt;
-          stroke-linejoin: miter;
-          stroke-opacity: 1;
-        "
-        x="200"
-        y="385"
-        id="text3040"
-      >
-        {{ coa.bannerText }}
-      </text>
+      <g id="banner_text">
+        <path
+          style="fill: none"
+          d="m 41.538419,374.52673 c 42.98725,12.74421 275.025511,13.62464 321.752511,0.3404"
+          id="bannerTextPath"
+        />
+        <text
+          xml:space="preserve"
+          class="banner-text"
+          style="
+            stroke: none;
+            stroke-width: 1.00197315px;
+            stroke-linecap: butt;
+            stroke-linejoin: miter;
+            stroke-opacity: 1;
+          "
+          x="162"
+          id="textBanner"
+        >
+          <textPath href="#bannerTextPath">
+            {{ coa.bannerText }}
+          </textPath>
+        </text>
+      </g>
     </g>
   </svg>
 </template>

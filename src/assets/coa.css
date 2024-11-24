@@ -7,8 +7,8 @@
   --heraldry-tincture-or: rgb(255, 215, 0);
   --heraldry-tincture-argent: rgb(255, 255, 255);
 
-  --heraldry-tincture-gules: rgb(255, 0, 0);
   --heraldry-tincture-sable: rgb(0, 0, 0);
+  --heraldry-tincture-gules: rgb(255, 0, 0);
   --heraldry-tincture-azure: rgb(0, 0, 255);
   --heraldry-tincture-vert: rgb(0, 128, 0);
   --heraldry-tincture-purpure: rgb(128, 0, 128);
@@ -16,6 +16,19 @@
   --heraldry-tincture-murrey: rgb(139, 0, 75);
   --heraldry-tincture-sanguine: rgb(178, 34, 34);
   --heraldry-tincture-tenne: rgb(198, 112, 0);
+
+  --heraldry-text-on-or: rgb(0, 0, 0);
+  --heraldry-text-on-argent: rgb(0, 0, 0);
+
+  --heraldry-text-on-sable: rgb(255, 255, 255);
+  --heraldry-text-on-gules: rgb(255, 255, 255);
+  --heraldry-text-on-azure: rgb(255, 255, 255);
+  --heraldry-text-on-vert: rgb(255, 255, 255);
+  --heraldry-text-on-purpure: rgb(255, 255, 255);
+
+  --heraldry-text-on-murrey: rgb(255, 255, 255);
+  --heraldry-text-on-sanguine: rgb(255, 255, 255);
+  --heraldry-text-on-tenne: rgb(255, 255, 255);
 
   --heraldry-outer-tincture: var(--heraldry-tincture-azure);
   --heraldry-inner-tincture: var(--heraldry-tincture-gules);

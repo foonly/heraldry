@@ -8,8 +8,10 @@ export const useCOAStore = defineStore(
     const bannerText = ref('')
     const division = ref('')
     const tinctures = ref({
-      outer: 'blue',
-      inner: 'red'
+      outer: 'var(--heraldry-tincture-azure)',
+      inner: 'var(--heraldry-tincture-gules)',
+      shield: 'var(--heraldry-tincture-or)',
+      division: 'var(--heraldry-tincture-vert)'
     })
 
     return { name, bannerText, division, tinctures }
